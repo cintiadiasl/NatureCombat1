@@ -18,8 +18,8 @@ class Menu:
         pygame.mixer_music.play(-1)  # a música tocará em loop
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(50, "Nature", COLOR_ORANGE, ((WIN_WIDTH / 2), 70))
-            self.menu_text(50, "Combat1", COLOR_ORANGE, ((WIN_WIDTH / 2), 140))
+            self.menu_text(50, "Nature", COLOR_WHITE, ((WIN_WIDTH / 2), 70))
+            self.menu_text(50, "Combat1", COLOR_WHITE, ((WIN_WIDTH / 2), 140))
 
             for i in range(len(MENU_OPTION)):
                 self.menu_text(20, MENU_OPTION[i], COLOR_BLACK, ((WIN_WIDTH / 2), 200 + 25 * i))
