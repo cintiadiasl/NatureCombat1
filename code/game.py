@@ -10,7 +10,8 @@ from code.menu import Menu
 class Game:
     def __init__(self):
         pygame.init()
-        self.window = pygame.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT)) #variáveis que definem as dimensões da imagem
+        self.window = pygame.display.set_mode(
+            size=(WIN_WIDTH, WIN_HEIGHT))  # variáveis que definem as dimensões da imagem
 
     def run(self):
         while True:
@@ -18,8 +19,13 @@ class Game:
             menu_return = menu.run()
 
             if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2]]:
-                level = Level(self.window, 'Level1', menu_return)
-                level_return = level.run()
+                player_score = [0, 0]  # Essa lista contempla: [Player1, Player2]
+                level = Level(self.window, 'Level1', menu_return, player_score)
+                level_return = level.run(player_score)
+                if level_return:
+                    level = Level(self.window, 'Level2', menu_return, player_score)
+                    level_return = level.run(player_score)
+
             elif menu_return == MENU_OPTION[4]:
                 pygame.quit()  # fechar a janela
                 quit()  # end  pygame
