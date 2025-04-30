@@ -131,6 +131,7 @@ PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,  # Comando para os tiros do Playe
 # S  Constantes começadas pela letra S
 SPAWN_TIME = 4000
 
+
 # T Constantes começadas pela letra T
 TIMEOUT_STEP = 100 #equivale a 100 ms
 TIMEOUT_LEVEL = 20000 # equivale a 10s
@@ -138,3 +139,17 @@ TIMEOUT_LEVEL = 20000 # equivale a 10s
 # W - Constantes começadas pela letra W
 WIN_WIDTH = 576
 WIN_HEIGHT = 324
+
+# Constante começada pela letraS
+SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),
+             'EnterName': (WIN_WIDTH / 2, 80),
+             'Label': (WIN_WIDTH / 2, 90),
+             'Name': (WIN_WIDTH / 2, 110),
+             0: (WIN_WIDTH / 2, 110),
+             1: (WIN_WIDTH / 2, 130),
+             2: (WIN_WIDTH / 2, 150),
+             3: (WIN_WIDTH / 2, 170),
+             4: (WIN_WIDTH / 2, 190),
+             5: (WIN_WIDTH / 2, 210),
+             6: (WIN_WIDTH / 2, 230),
+             }
